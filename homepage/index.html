@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="style2.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <title>My Webpage | Homepage</title>
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <div class="sidenav">
+        <a href="sub.html"><img src="images/favicon.ico" alt="Logo" id="moss" width="50" class="d-inline-block align-text-center"></a>
+        <a href="#" class="name">Gabriel Lau</a>
+        <a href="index.html" class="link">Home</a>
+        <a href="essay.html" class="link">Essay</a>
+        <a href="pictures.html" class="link">Pictures</a>
+        <a href="landmark.html" class="link">Attractions</a>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Gabriel Lau▾</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="essay.html">Essay</a>
+            <a href="pictures.html">Pictures</a>
+            <a href="landmark.html">Attractions</a>
+          </div>
+        </div>
+      </div>
+      <div class="main title user-select-none">
+        <div class = "head">
+          <h2>Hylan Boulevard</h2>
+          <h4> My New York</h4>
+        </div>
+        <div class="pagetwo">
+          <div class="where">
+            <div class="map-head">
+              <h3>Location: </h3>
+            </div>
+            <div class="map-body">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3698.929008498168!2d-74.14365198460018!3d40.54645837935017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24bbccfa02f37%3A0x99c5262739b85164!2sHylan%20Blvd%2C%20Staten%20Island%2C%20NY!5e1!3m2!1sen!2sus!4v1677018113057!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <br>
+          </div>
+          <div class="what">
+            <h3 style="margin-top: 10px;">What is Hylan Boulevard?</h3>
+            <p style="margin-left: 20px; margin-right: 20px; background-color: #c9c9c9">Hylan Blvd is the 2nd longest street in New York City, running 14 miles from the top to bottom of Staten Island. It falls just behind Broadway, which has 13 Miles in Manhattan, 2 Miles in the Bronx, and 18 miles past New York City. Hylan is one of the staple locations of Staten Island, the others being Staten Island Mall and New Dorp. It's also home to shops from a variety of cultures, such as turkish, chinese and greek.</p>
+            <br>
+          </div>
+          <div class="text">
+            <h3 style="margin-top: 10px;">My Essay</h3>
+            <p style="margin-left: 20px; margin-right: 20px; background-color: #7e7e7e">For my AP Language and Composition class, we had to write an essay about how we viewed New York City, called "Write Your New York". For My Essay, I wrote about Hylan Boulevard, comparing it to SoHo in Manhattan and the differences between Staten Island and the rest of NYC.</p>
+            <form action="essay.html">
+              <button class="indexbtn" type="submit" style="vertical-align:middle"><span>View My Essay!</span></button>
+            </form>
+          </div>
+          <div class="pics">
+            <h3 style="margin-top: 10px;">Pictures</h3>
+            <p style="margin-left: 20px; margin-right: 20px; background-color: #5c5b5b">Here you can find some pictures of Hylan Boulevard, With a small caption alongside showing where it was taken.</p>
+            <form action="pictures.html">
+              <button class="indexbtn" type="submit" style="vertical-align:middle"><span>View Some Pictures!</span></button>
+            </form>
+          </div>
+          <div class="attractions">
+            <h3 style="margin-top: 10px;">Attractions</h3>
+            <p style="margin-left: 20px; margin-right: 20px; background-color: #323232">Hylan Boulevard, being the 14 mile long road that it is, consists of many intresting places located alongside it's path. Such locations are both old and new, ranging from the old and historic to the new and modern.</p>
+            <form action="landmark.html">
+              <button class="indexbtn" type="submit" style="vertical-align:middle"><span>View Some Locations!</span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
