@@ -3,6 +3,8 @@
 //starting bullets is always like 7 (i think you fixed this but never uploaded it?)
 
 
+
+
 //starting page
 let gameState = "title";
 //enemy
@@ -23,9 +25,9 @@ let playerDY = 0;
 let playerBullets = [];
 let bulletTimer = 0;
 let bulletsShot = 0;
-let fireSpeed = 0.2;
+let fireSpeed = 0.15;
 let originalFireSpeed = fireSpeed;
-let playerDmg = 20 * 1.5;
+let playerDmg = 35;
 let originalPlayerDmg = playerDmg;
 //difficulty
 let difficulty = -1;
@@ -58,9 +60,13 @@ let powerDur = 10;
 let power;
 
 
+
+
 function preload() {
   font = loadFont("fonts/font.ttf");
 }
+
+
 
 
 function setup() {
@@ -82,6 +88,8 @@ function setup() {
        enemyBullets.push(enemyBullet)
   }
 }
+
+
 
 
 function title() {
@@ -114,6 +122,8 @@ function title() {
 }
 
 
+
+
 function draw() {
   background(0);
   switch (gameState)
@@ -135,6 +145,7 @@ function draw() {
         break;
   }
 }
+
 
 function tutorial(){
   textAlign(CENTER);
@@ -177,6 +188,7 @@ function tutorial(){
     mouseRel = true;
   }
 }
+
 
 function settings() {
   textAlign(CENTER);
@@ -305,6 +317,10 @@ function settings() {
     keyRel = true;
   }
 }
+
+
+
+
 
 
 
@@ -473,6 +489,8 @@ if(puDecEnBulSpawnSpeed == true){
 }
 
 
+
+
 function gameOver()
 {
   //score when i finally decide how to do that
@@ -513,6 +531,8 @@ function gameOver()
 }
 
 
+
+
 function reset(){
   let playerX = player.x;
   let playerY = player.y;
@@ -529,6 +549,8 @@ function reset(){
   spawnTimer = 0;
   bulletTimer = 0;
 }
+
+
 
 
 function hardReset(){
@@ -594,6 +616,8 @@ function hardReset(){
 }
 
 
+
+
 function increaseDifficulty()
 {
  difficulty++;
@@ -624,9 +648,11 @@ function increaseDifficulty()
 }
 
 
+
+
 function randomizeDifficultyAddition()
 {
-  let rand = Math.round(random(0.5,5.499))
+  let rand = Math.round(random(0.5,4.499))
   switch (rand)
   {
     case 1:
@@ -645,10 +671,12 @@ function randomizeDifficultyAddition()
 }
 
 
+
+
 function increaseFireSpeed()
 {
   //INcreases the delay betweem shots
-    fireSpeed += .05;
+    fireSpeed += .075;
 }
 function increaseEnemyBulletFireRate()
 {
@@ -660,9 +688,11 @@ function increaseZigEraticity()
 }
 function increaseEnemyMoveSpeed()
 {
-    enemy.speed += 3;
-    enemy.angleIncrease += .05;
+    enemy.speed += 4;
+    enemy.angleIncrease += .075;
 }
+
+
 
 
 class Button{
@@ -675,6 +705,8 @@ class Button{
     this.h = h;
     this.name = name;
   }
+
+
 
 
   display() {
@@ -696,6 +728,14 @@ class Button{
     text(this.name,this.x + 3,this.y - 3);
   }
 }
+
+
+
+
+
+
+
+
 
 
 
