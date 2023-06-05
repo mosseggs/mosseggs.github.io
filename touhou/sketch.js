@@ -25,7 +25,7 @@ let bulletTimer = 0;
 let bulletsShot = 0;
 let fireSpeed = 0.2;
 let originalFireSpeed = fireSpeed;
-let playerDmg = 20;
+let playerDmg = 20 * 1.5;
 let originalPlayerDmg = playerDmg;
 //difficulty
 let difficulty = -1;

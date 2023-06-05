@@ -2,8 +2,8 @@ class Bullet{
     constructor(x,y){
         this.x = x;
         this.y = y;
-        this.dy = 5;
-        this.diameter = 10;
+        this.dy = 5 * 1.7;
+        this.diameter = 10 * 1.5;
     }
     display(){
         fill(50,50,255);

@@ -5,7 +5,7 @@ class EnemyBullet{
       this.speed = 2;
       this.dy = 0;
       this.dx = 0;
-      this.diameter = 5;
+      this.diameter = 5 * 2;
       this.directionalNumber = dirNum;//The number that tracks which out of the 8 balls this is to track its direction
       this.goingLeft = true;
       this.goingDown = true;
