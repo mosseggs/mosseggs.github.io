@@ -27,7 +27,7 @@ let bulletTimer = 0;
 let bulletsShot = 0;
 let fireSpeed = 0.15;
 let originalFireSpeed = fireSpeed;
-let playerDmg = 35;
+let playerDmg = 45;
 let originalPlayerDmg = playerDmg;
 //difficulty
 let difficulty = -1;
@@ -452,7 +452,7 @@ if(puIncFireSpeed==true){
 }
 if(puIncAtk == true){
   text("Atk", width-100,height-100);
-  playerDmg = 50;
+  playerDmg = 75;
   if(powerDurTimer[1] <= 0){
     playerDmg = originalPlayerDmg;
     puIncAtk = false;

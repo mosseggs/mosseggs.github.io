@@ -2,7 +2,7 @@ class Bullet{
     constructor(x,y){
         this.x = x;
         this.y = y;
-        this.dy = 5 * 1.7;
+        this.dy = 11;
         this.diameter = 10 * 1.5;
     }
     display(){
