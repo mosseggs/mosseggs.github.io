@@ -1,10 +1,3 @@
-//Notable bugs:
-//random collision crash that happened during the bullet switching, crashes at line 258 (if (enemyBullets[i].collides(playerBullets[j])))
-//starting bullets is always like 7 (i think you fixed this but never uploaded it?)
-
-
-
-
 //starting page
 let gameState = "title";
 let babyMode = false;
@@ -286,35 +279,55 @@ function settings() {
     switch(keyLog){
       case player.up:
         player.up = keyCode;
-        up = key;
+        if(keyCode == 32){
+          up = "space";
+        }else{
+          up = key;
+        }
         keyLog = 0;
         keyLock = false;
         keyRel = false;
         break;
       case player.left:
         player.left = keyCode;
-        left = key;
+        if(keyCode == 32){
+          left = "space";
+        }else{
+          left = key;
+        }
         keyLog = 0;
         keyLock = false;
         keyRel = false;
         break;
       case player.down:
         player.down = keyCode;
-        down = key;
+        if(keyCode == 32){
+          down = "space";
+        }else{
+          down = key;
+        }
         keyLog = 0;
         keyLock = false;
         keyRel = false;
         break;
       case player.right:
         player.right = keyCode;
-        right = key;
+        if(keyCode == 32){
+          right = "space";
+        }else{
+          right = key;
+        }
         keyLog = 0;
         keyLock = false;
         keyRel = false;
         break;
       case shootButton:
         shootButton = keyCode;
-        shoot = key;
+        if(keyCode == 32){
+          shoot = "space";
+        }else{
+          shoot = key;
+        }
         keyLog = 0;
         keyLock = false;
         keyRel = false;
