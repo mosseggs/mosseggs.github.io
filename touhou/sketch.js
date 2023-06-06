@@ -7,6 +7,7 @@
 
 //starting page
 let gameState = "title";
+let babyMode = false;
 //enemy
 let enemyX = 400;
 let enemyY = 250;
@@ -25,9 +26,9 @@ let playerDY = 0;
 let playerBullets = [];
 let bulletTimer = 0;
 let bulletsShot = 0;
-let fireSpeed = 0.15;
+let fireSpeed = 0.2;
 let originalFireSpeed = fireSpeed;
-let playerDmg = 45;
+let playerDmg = 10;
 let originalPlayerDmg = playerDmg;
 //difficulty
 let difficulty = -1;
@@ -71,15 +72,17 @@ function preload() {
 
 function setup() {
   createCanvas(800,windowHeight);
-  play = new Button("left",height * 3/4, "play", 200, 75, 150);
-  setting = new Button("right",height * 3/4, "settings", 200, 75, 150);
-  guide = new Button("middle", height * 7/8, "guide", 200,75, 0);
+  play = new Button("left",height * 3/4, "play", 250, 75, 150);
+  setting = new Button("right",height * 3/4, "settings", 250, 75, 150);
+  baby = new Button("left", height * 7/8, "baby mode", 250,75, 150)
+  guide = new Button("right", height * 7/8, "guide", 250,75, 150);
   plus = new Button("left",height * 13.5/20, "+", 50,50, 35);
   minus = new Button("right",height * 13.5/20, "-", 50,50, 35);
   back = new Button("middle", height * 9/10, "back", 200,75, 0);
   restart = new Button("middle", height * 7/10, "back to title", 400,75, 0);
   player = new Player(width / 2, 4 * windowHeight / 5, playerDX, playerDY);
   enemy = new Enemy(enemyX,enemyY,width/2, startDif);
+
   increaseDifficulty();
   for (let i = 0; i < bulletCount; i++)
   {
@@ -104,6 +107,7 @@ function title() {
   play.display();
   setting.display();
   guide.display();
+  baby.display();
   if(mouseIsPressed === false){
     mouseRel = true;
   }
@@ -118,7 +122,12 @@ function title() {
   if(mouseX < guide.x + guide.w/2 && mouseX > guide.x - guide.w/2 && mouseY < guide.y + guide.h/2 && mouseY > guide.y - guide.h/2 && mouseIsPressed === true && mouseRel == true){
     gameState = "guide";
     mouseRel = false;
-}
+  }
+  if(mouseX < baby.x + baby.w/2 && mouseX > baby.x - baby.w/2 && mouseY < baby.y + baby.h/2 && mouseY > baby.y - baby.h/2 && mouseIsPressed === true && mouseRel == true){
+    babyMode = !babyMode;
+    baby.state = !baby.state;
+    mouseRel = false;
+  }
 }
 
 
@@ -326,6 +335,10 @@ function settings() {
 
 
 function game(){
+  if(babyMode == true){
+    fireSpeed = 0.15;
+    playerDmg = 45;
+  }
   //Enemy bullets spawning
   for (let i = 0; i < enemyBullets.length; i++)
   {
@@ -537,7 +550,7 @@ function reset(){
   let playerX = player.x;
   let playerY = player.y;
   player = new Player(playerX, playerY, playerDX, playerDY);
-  enemy = new Enemy(enemyX + random(-100,100),enemyY + random(-100,100) , 370+ 40 * exp(difficulty/2), difficulty);
+  enemy = new Enemy(enemyX + random(-100,100),enemyY + random(-100,100) , enemyHealth, difficulty);
   playerBullets.length = 0;
   enemyBullets.length = 0;
   for (let i = 0; i < bulletCount; i++)
@@ -567,24 +580,16 @@ function hardReset(){
   enBulSpawnSpeed = 2;
   enemyHealth = 400;
   originalEnBulSpawnSpeed = enBulSpawnSpeed;
-  enemy = new Enemy(enemyX + random(-100,100),enemyY + random(-100,100) , 370+ 40 * exp(difficulty/2), difficulty);
-  for (let i = 0; i < bulletCount; i++)
-  {
-      enemyBullet = new EnemyBullet(enemy.x, enemy.y, i)
-      enemyBullet.setSpeed();
-      enemyBullets.push(enemyBullet)
-  }
   //player
   playerDX = 0;
   playerDY = 0;
   playerBullets.length = 0;
   bulletTimer = 0;
   bulletsShot = 0;
-  fireSpeed = 0.15;
+  fireSpeed = 0.2;
   originalFireSpeed = fireSpeed;
-  playerDmg = 45;
+  playerDmg = 10;
   originalPlayerDmg = playerDmg;
-  player = new Player(width / 2, 4 * windowHeight / 5, playerDX, playerDY);
   //Keybindings
   keyLog = 0;
   keyLock = false;
@@ -613,6 +618,16 @@ function hardReset(){
   puIncAtk=false;
   puDecEnBulSpawnSpeed=false;
   powerDur = 10;
+  //Setup items
+  enemy = new Enemy(enemyX + random(-100,100),enemyY + random(-100,100) , enemyHealth, difficulty);
+  player = new Player(width / 2, 4 * windowHeight / 5, playerDX, playerDY);
+  for (let i = 0; i < bulletCount; i++)
+  {
+      enemyBullet = new EnemyBullet(enemy.x, enemy.y, i)
+      enemyBullet.setSpeed();
+      enemyBullets.push(enemyBullet)
+  }
+
 }
 
 
@@ -652,7 +667,7 @@ function increaseDifficulty()
 
 function randomizeDifficultyAddition()
 {
-  let rand = Math.round(random(0.5,4.499))
+  let rand = Math.round(random(0.5,5.499))
   switch (rand)
   {
     case 1:
@@ -666,6 +681,9 @@ function randomizeDifficultyAddition()
       break
     case 4:
       increaseEnemyMoveSpeed();
+      break;
+    case 5:
+      increaseEnemyHealth();
       break;
   }
 }
@@ -691,7 +709,10 @@ function increaseEnemyMoveSpeed()
     enemy.speed += 4;
     enemy.angleIncrease += .075;
 }
-
+function increaseEnemyHealth()
+{
+    enemyHealth+=50;
+}
 
 
 
@@ -704,10 +725,8 @@ class Button{
     this.w = w;
     this.h = h;
     this.name = name;
+    this.state = false;
   }
-
-
-
 
   display() {
     if(this.row =="left"){
@@ -720,7 +739,12 @@ class Button{
       this.x = width/2;
     }
     rectMode(CENTER);
-    fill(255);
+    if(this.state == false){
+      fill(255);
+    }
+    else{
+      fill(100);
+    }
     rect(this.x, this.y, this.w, this.h);
     fill(0);
     textAlign(CENTER,CENTER);
