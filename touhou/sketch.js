@@ -41,6 +41,10 @@ let left = "a";
 let down = "s";
 let right = "d";
 let shoot = "space";
+let upKey = 87;
+let downKey = 83;
+let leftKey = 65;
+let rightKey = 68;
 let shootButton = 32;
 //powerups
 let powerups = [];
@@ -51,6 +55,7 @@ let puIncFireSpeed=false;
 let puIncAtk=false;
 let puDecEnBulSpawnSpeed=false;
 let powerDur = 10;
+let powerSpawn = 9;
 let power;
 
 
@@ -279,6 +284,7 @@ function settings() {
     switch(keyLog){
       case player.up:
         player.up = keyCode;
+        upKey = keyCode;
         if(keyCode == 32){
           up = "space";
         }else{
@@ -290,6 +296,7 @@ function settings() {
         break;
       case player.left:
         player.left = keyCode;
+        leftKey = keyCode;
         if(keyCode == 32){
           left = "space";
         }else{
@@ -301,6 +308,7 @@ function settings() {
         break;
       case player.down:
         player.down = keyCode;
+        downKey = keyCode;
         if(keyCode == 32){
           down = "space";
         }else{
@@ -312,6 +320,7 @@ function settings() {
         break;
       case player.right:
         player.right = keyCode;
+        rightKey = keyCode;
         if(keyCode == 32){
           right = "space";
         }else{
@@ -349,8 +358,14 @@ function settings() {
 
 function game(){
   if(babyMode == true){
-    fireSpeed = 0.15;
-    playerDmg = 45;
+    if(puIncFireSpeed==false){
+      fireSpeed = 0.15;
+    }
+    if(puIncAtk==false){
+      playerDmg = 45;
+    }
+
+    powerSpawn = 2;
   }
   //Enemy bullets spawning
   for (let i = 0; i < enemyBullets.length; i++)
@@ -429,7 +444,7 @@ function game(){
   }
   //spawns powerups
   if(difficulty > 1){
-    if(powerSpawnTimer > 9){
+    if(powerSpawnTimer > powerSpawn){
       power = new Powerup(random(puDiam/2,width-(puDiam/2)), random(puDiam/2,width-(puDiam/2)),puDiam);
       powerups.push(power);
       powerSpawnTimer = 0;
@@ -469,7 +484,7 @@ colorMode(RGB);
 fill(255);
 if(puIncFireSpeed==true){
   fireSpeed = 0.01;
-  text("Fire Speed  ", width-100,height-150);
+  text("Fire Speed", width-100,height-150);
   if(powerDurTimer[0] <= 0){
     fireSpeed = originalFireSpeed;
     puIncFireSpeed = false;
@@ -478,7 +493,12 @@ if(puIncFireSpeed==true){
 }
 if(puIncAtk == true){
   text("Atk", width-100,height-100);
-  playerDmg = 75;
+  if(babyMode == true){
+    playerDmg = 75;
+  }
+  else{
+    playerDmg = 50;
+  }
   if(powerDurTimer[1] <= 0){
     playerDmg = originalPlayerDmg;
     puIncAtk = false;
@@ -487,7 +507,7 @@ if(puIncAtk == true){
 }
 if(puDecEnBulSpawnSpeed == true){
   text("Enemy Fire Speed", width-150,height-50);
-  enBulSpawnSpeed = 2;
+  enBulSpawnSpeed = 5;
   if(powerDurTimer[2] <= 0){
     enBulSpawnSpeed = originalEnBulSpawnSpeed;
     puDecEnBulSpawnSpeed = false;
@@ -630,6 +650,7 @@ function hardReset(){
   puIncFireSpeed=false;
   puIncAtk=false;
   puDecEnBulSpawnSpeed=false;
+  powerSpawn = 9;
   powerDur = 10;
   //Setup items
   enemy = new Enemy(enemyX + random(-100,100),enemyY + random(-100,100) , enemyHealth, difficulty);

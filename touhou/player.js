@@ -1,13 +1,13 @@
 class Player{
-    constructor(x,y,dx,dy){
+    constructor(x,y,dx,dy,u,d,l,r){
         this.x = x;
         this.y = y;
         this.dx = dx;
         this.dy = dy;
         this.diameter = 40;
         this.health = 100;
-        this.up = 87;
-        this.down = 83;
+        this.up = u;
+        this.down = 8 3;
         this.left = 65;
         this.right = 68;
     }
