@@ -7,9 +7,9 @@ class Player{
         this.diameter = 40;
         this.health = 100;
         this.up = u;
-        this.down = 8 3;
-        this.left = 65;
-        this.right = 68;
+        this.down = d;
+        this.left = l;
+        this.right = r;
     }
 
     display(){
