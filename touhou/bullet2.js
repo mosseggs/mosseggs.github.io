@@ -22,6 +22,8 @@ class Bullet2{
         this.vel.setMag(this.speed);
         this.vel.initialPos = dirOffset;
         this.vel.pos = this.vel.initialPos.copy();
+        this.vel.normalize();
+        this.vel.mult(5);
     }
     update() {
         this.pos.add(this.vel);
