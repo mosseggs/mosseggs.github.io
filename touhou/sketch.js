@@ -282,17 +282,6 @@ function game(){
         playerBullets.splice(i, 1);
     }
   }
-  //When enemy health hits X, Y happens
-  if(enemy.health <= 0){
-    increaseDifficulty();
-    reset();
-  }
-  if(player.health <= 0){
-    gameState = "gameOver";
-  }
-  if(player.collides(enemy)){
-    player.health--;
-  }
   //spawns powerups
   if(difficulty > 1){
     if(powerSpawnTimer > powerSpawn){
@@ -370,6 +359,17 @@ if(puDecEnBulSpawnSpeed == true){
   }
   powerDurTimer[2]-=1/60;
 }
+  //When enemy health hits X, Y happens
+  if(enemy.health <= 0){
+    increaseDifficulty();
+    reset();
+  }
+  if(player.health <= 0){
+    gameState = "gameOver";
+  }
+  if(player.collides(enemy)){
+    player.health--;
+  }
   //displays
   player.display();
   player.update();

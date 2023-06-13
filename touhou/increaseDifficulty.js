@@ -77,4 +77,5 @@ function increaseEnemyMoveSpeed()
 function increaseEnemyHealth()
 {
     enemyHealth+=50;
+    necBul
 }

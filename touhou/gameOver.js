@@ -2,16 +2,11 @@ function gameOver()
 {
   //score when i finally decide how to do that
   if(scoreCalc == false){
-    score = 0;
-    for(i = startDif; i < difficulty; i++){
-      necBul = (370+ 40 * exp(i/2)) / 10;
-      score+= 370+ 40 * exp(i/2) - necBul;
-      bulletsShot -= necBul;
-    }
+    score = necBul * playerDmg;
     score += (enemy.maxHealth - enemy.health);
-    score /= 10;
+    bulletsShot -= necBul;
     score += 100;
-    score -= (bulletsShot * 0.5)
+    score -= (bulletsShot * 2)
     //subtract all bullets
     if(score < 0){
       score = 0;
@@ -46,11 +41,15 @@ function hardReset(){
     enemyDX = 0;
     enemyDY = 0;
     enemyBullets.length = 0;
+    enemyBullets2.length = 0;
+    enemyBullets3.length = 0;
     spawnTimer = 0;
+    spawnTimer2 = 0;
     bulletCount = 7;
     enBulSpawnSpeed = 2;
     enemyHealth = 400;
     originalEnBulSpawnSpeed = enBulSpawnSpeed;
+    enBulChoice = 0;
     //player
     playerDX = 0;
     playerDY = 0;
@@ -61,6 +60,14 @@ function hardReset(){
     originalFireSpeed = fireSpeed;
     playerDmg = 10;
     originalPlayerDmg = playerDmg;
+    //difficulty
+    difficulty = 0;
+    startDif = 0;
+    difTimer = 0;
+    //score
+    score = 0;
+    necBul = 0;
+    scoreCalc = false;
     //Keybindings
     keyLog = 0;
     keyLock = false;
@@ -72,14 +79,6 @@ function hardReset(){
     right = "d";
     shoot = "space";
     shootButton = 32;
-    //difficulty
-    difficulty = 0;
-    startDif = 0;
-    difTimer = 0;
-    //score
-    score = 0;
-    necBul = 0;
-    scoreCalc = false;
     //powerups
     powerups.length = 0;
     powerSpawnTimer = 0;

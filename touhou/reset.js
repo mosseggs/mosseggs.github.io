@@ -3,6 +3,7 @@ function reset(){
     let playerY = player.y;
     player = new Player(playerX, playerY, playerDX, playerDY,upKey,downKey,leftKey,rightKey);
     enemy = new Enemy(enemyX + random(-100,100),enemyY + random(-100,100) , enemyHealth, difficulty);
+    necBul+= enemyHealth/playerDmg;
     playerBullets.length = 0;
     enemyBullets.length = 0;
     enemyBullets2.length = 0;
