@@ -1,0 +1,144 @@
+﻿@font-face {
+    font-family: "amadeus_regularamadeusRg";
+    src: url("fonts/Amadeus-webfont.eot");
+    src: url("fonts/Amadeus-webfont.eot?#iefix") format("embedded-opentype"),
+         url("fonts/Amadeus-webfont.woff") format("woff"),
+         url("fonts/Amadeus-webfont.ttf") format("truetype"),
+         url("fonts/Amadeus-webfont.svg#amadeus_regularamadeusRg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "rye";
+    src: url("fonts/Rye-Regular.ttf");
+}
+@font-face {
+    font-family: "genshin";
+    src: url("fonts/zh-cn.ttf");
+}
+/* more fonts from https://fonts.google.com/ */
+
+body {
+  background-color: #363636;
+  font-family: verdana, arial, sans-serif;
+  font-size: .9rem;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: #380038;
+  font-size: 2rem;
+  color: #fffafa;
+
+  font-family: genshin, sans-serif;
+  /* font-family: amadeus_regularamadeusRg, sans-serif;
+  /* font-family: "Fredoka One", cursive;
+  font-family: 'Kablammo', cursive; */ 
+
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 7rem;
+  /* 7* h-offset v-offset blur spread color */
+  box-shadow: 0 0 5px 3px black;
+
+  z-index: 2;
+}
+header h1 {
+  font-weight: normal;
+}
+
+footer{
+  background-color:#380038;
+  color: #f9f9f9;
+  padding: .5em;
+  text-align: center;
+
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 2rem;
+  /* 7* h-offset v-offset blur spread color */
+  box-shadow: 0 0 5px 3px black;
+
+  z-index:2;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  color: #444;
+  padding: 9em 1em 3em;
+
+  max-width: 1000px;
+  box-shadow: 0 0 5px 3px black;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 2em;
+}
+
+nav {
+  background-color: #777;
+  padding: 2em;
+  padding-top: 5em;
+
+  height: 230px;
+  border-radius: 0 0 1em 1em;
+  position:relative;
+  top:-50px;
+  z-index: 1;
+
+  background: linear-gradient(#333, #777);
+  transition: height 0.5s;
+}
+nav:hover {/* pseudo class */
+  height: 280px;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  margin-bottom: 1em;
+}
+
+.chat-pullout {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 1em;
+  font-size: .8rem;
+
+  position: absolute;
+  top: 11.5em;
+  left: 80px;
+  border-radius: 1em;
+  box-shadow: 0 0 5px 3px black;
+  cursor:pointer;
+}
+.chat-pullout span {
+  font-size: 2em;
+}
+
+a:link,
+a:active {
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline; 
+}
+footer a:link,
+footer a:active,
+footer a:visited,
+nav a:link,
+nav a:active,
+nav a:visited {
+  color: #f9f9f9;
+}

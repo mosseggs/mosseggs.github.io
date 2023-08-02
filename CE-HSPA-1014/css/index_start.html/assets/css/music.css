@@ -1,0 +1,59 @@
+body{
+    background: rgb(219, 219, 1);
+    color:rgb(39, 39, 13);/* color property changes text color */
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    font-size: 5rem;
+    margin-top: .25em;
+    margin-bottom: 1em;
+    text-decoration: underline overline wavy olive;
+}
+h2{
+    font-size: 2rem;
+    
+}
+h1,h2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    text-align: center;
+    font-style:italic;
+    font-variant: small-caps;
+    text-shadow: 3px 3px 5px violet;
+}
+h2 span{
+    font-weight: bold;
+}
+table{
+    border: .7em solid #ff69b4;
+    width: 90vw; /* % viewport width */
+    height: 50vh; /* viewport height */
+    padding: 1em;
+    margin: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    margin: 2em 1em; /* top/bottom left/right */
+
+    margin: 4em 0 2em; /* top left/right bottom*/
+
+    margin:1em 2em 1em 2em; /* top right left bottom*/
+    
+    margin: 2em auto; /* use auto to center content*/
+
+    box-shadow: 5px 5px 10px gray;
+}
+
+th, td{
+    text-align: left;
+}
+
+.song-name{
+    color:lawngreen;
+}
+
+#mozart{
+ color: orange;
+ font-weight: 700;
+}

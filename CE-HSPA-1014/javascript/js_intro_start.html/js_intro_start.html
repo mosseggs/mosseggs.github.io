@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8' />
+  <title>JS Intro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .square {
+      float: left;
+      height: 20px;
+      width: 20px;
+    }
+
+    html{
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <img src="../../06.photoshop/photos/face replace.jpg" width="100%"style="position:absolute">
+  <script>
+
+    // // Hello World
+    // let name = `Tyler`;
+
+    // console.log(`Hello name `);
+    // console.log('Hello ' + name ); //concatenation
+    // console.log(`Hello Y'all`);
+
+    // name = `Kyle`;
+    // console.log(`Hello ${name}`); //interpolation
+
+    // const PI=3.14159;
+
+    // console.log(`PI + 7 =`, PI + 7);
+
+    // function sayHello( fnName){
+    //   console.log(`Hello ${fnName}`);
+    // }
+
+    // sayHello(`Evan`);
+    // sayHello(`Jake`);
+    // sayHello(`Aaron`);
+
+    const splotches = []; //array to hold all splotches
+    
+    function randNum(){
+      return(parseInt(Math.random() * 255));
+    }
+    function buildSplotch(){
+      // console.log(`in buildSplotch`);
+      //<div class="square" style="color: blue"> </div>
+      const ele=document.createElement( `div` );
+
+      ele.setAttribute( `class`, `square` );
+      ele.style.backgroundColor = `rgb(${randNum()},${randNum()},${randNum()})`;
+      ele.style.opacity=0;
+
+      // console.log(ele);
+
+      ele.addEventListener(`mouseover`, () => (
+        ele.animate([
+          {
+            opacity: 1,
+            transform: `scale(2)`,
+            borderRadius: `10px`
+          }
+        ], {
+          duration: 500, //ms
+          iterations: 2,
+          direction: `alternate`,
+          easing: `linear`,
+        })
+      ))
+        
+      return ele;
+    }
+
+    const numSquares = parseInt(window.innerHeight/20) * parseInt(window.innerWidth/20);
+
+
+    // let splotch = buildSplotch();
+    // document.body.appendChild(splotch);
+    for( let i = 0; i < numSquares; i++){
+      splotches[i] = buildSplotch();
+      document.body.appendChild(splotches[i] );
+    }
+    
+  </script>
+</body>
+</html>

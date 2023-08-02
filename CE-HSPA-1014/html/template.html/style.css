@@ -1,0 +1,84 @@
+html{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    animation: spin 1s linear infinite;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    font-family: 'Average Sans', sans-serif;
+    position: absolute;
+    
+    
+}
+body {
+    animation: text 1s linear infinite;
+    overflow: hidden; /* Hide scrollbars */
+    text-align: center;
+    width: 100vw;
+  }
+p{
+ font-size: 18px;
+}
+a:visited, a:link{
+    color: black;
+    text-decoration: none;
+}
+
+@keyframes spin{
+    0%{
+        rotate: 0deg; 
+        background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+        color:black;
+    }
+    14.2857142857%{
+        rotate: calc(360 * 1/7)deg; 
+        background: linear-gradient(to right, orange,yellow,green,blue,indigo,violet,red);
+        color:white;
+    }
+    28.5714285714%{
+        rotate: calc(360 * 2/7)deg;
+        background: linear-gradient(to right, yellow,green,blue,indigo,violet, red,orange);
+        color:black;
+    }
+    42.8571428571%{
+        rotate: calc(360 * 3/7)deg; 
+        background: linear-gradient(to right,green,blue,indigo,violet,red,orange,yellow);
+        
+    }
+    57.1428571429%{
+        rotate: calc(360 * 4/7)deg;
+        background: linear-gradient(to right, blue,indigo,violet, red,orange,yellow,green);
+        color:white;
+    }
+    71.4285714286%{
+        rotate: calc(360 * 5/7)deg;
+        background: linear-gradient(to right, indigo,violet, red,orange,yellow,green,blue);
+        color:black;
+    }
+    85.7142857143%{
+        rotate: calc(360 * 6/7)deg;
+        background: linear-gradient(to right, violet, red,orange,yellow,green, blue,indigo);
+        color:white;
+    }
+    100%{
+        rotate: 360deg;
+        background: linear-gradient(to right, red,orange,yellow,green, blue,indigo, violet);
+        color:black;
+    }
+}
+@keyframes text{
+    0%{
+        color:black;
+    }
+    25%{
+        color: rgb(127.5,127.5,127.5);
+    }
+    50%{
+        color:white;
+    }
+    75%{
+        color: rgb(127.5,127.5,127.5);
+
+    }
+    100%{
+        color:black;
+    }
+}

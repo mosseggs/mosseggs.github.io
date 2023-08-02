@@ -1,0 +1,98 @@
+/* 
+  colors
+  light: #FFF4E6
+  med:   #EDC693
+  dark:  #673D05
+*/
+body {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #673D05;
+  color: #444;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #EDC693;
+  padding: 1em;
+}
+
+h1, h2, h3 {
+  font-family: 'Courgette', cursive;
+}
+
+ol li {
+  margin-bottom: 1.5em;
+}
+
+header {
+  border-bottom: 3px solid #673D05;
+}
+
+footer {
+  border-top: 3px solid #673D05;
+  padding-top: 1em;
+}
+
+#turkey-1 {
+  float: right;
+  width: 500px;
+  height: 333px;
+
+   transform: rotate(10deg) /*skewX(20deg) translate(10px, 0px) scale(1.5) */;
+  position: relative;
+  top: 50px;
+  border: 10px outset #fff4e6;
+}
+
+#turkey-image {
+  background-image: url(../img/Turkey-1.jpg);
+  background-size: contain;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity .5s;
+}
+
+#turkey-1:hover #turkey-image {
+  opacity: .25;
+}
+
+#turkey-1:hover {
+  animation: spin 5s linear 1s;
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(10deg);
+  }
+  100%{
+    transform: rotate(370deg);
+  }
+}
+
+#turkey-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  transition: color .5s;
+  color:rgba(68, 68, 68, 0);
+}
+
+#turkey-1:hover #turkey-text {
+  
+  color:rgba(68, 68, 68, 100);
+}
