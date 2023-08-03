@@ -112,7 +112,7 @@
     margin-top: 82px;
     width: 100%;
     height: calc(100vh - 82px);
-    background-image: url(assets/images/pictures/Backdrop.png);
+    background-image: url(../images/pictures/Backdrop.png);
     background-size:cover;
     color: white;
   }
