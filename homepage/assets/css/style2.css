@@ -1,0 +1,391 @@
+@font-face {
+  font-family: genshin;
+  src: url(../fonts/zh-cn.ttf);
+}
+/* Navigation */
+  #moss {
+    opacity: 1.0;
+  }
+
+  #moss:hover {
+    opacity: 0.8;
+  }
+  .sidenav {
+    height: 82px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 10px;
+    cursor:default;
+    z-index: 9;
+    font-family: genshin;
+  }
+
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    align-items: center;
+    font-size: 25px;
+    color: #818181;
+    display: inline-block;
+  }
+
+  .sidenav a.link:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav a.name:hover {
+    color: #818181;
+    cursor:default;
+  }
+/* For Small Screens */
+  .sidenav button {
+    padding: 6px 0px 6px 14px;
+    text-decoration: none;
+    align-items: center;
+    font-size: 25px;
+    color: #818181;
+    background-color: #111;
+  }
+
+  .dropbtn:hover, .dropbtn:focus {
+    color: #666;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #262626;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: #666;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropbtn {
+    border: none;
+  }
+
+  .dropdown a:hover {
+    background-color: #424242;
+  }
+
+  .show {
+    display: block;
+  }
+
+  @media only screen and (max-width: 671px) {
+    .sidenav a.name {display: none;}
+    .sidenav a.link {display: none;}
+    .dropdown {display: inline-block;}
+  }
+
+  @media only screen and (min-width: 672px) {
+    .sidenav a.name {display: inline-block;}
+    .sidenav a.link {display: inline-block;}
+    div.dropdown, button.dropbtn, a.dropdown-content {display: none;}
+  }
+/* Main body */
+  .main {
+    margin-top: 82px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+  }
+/* Homepage exclusives*/
+  .title {
+    position: relative;
+    text-align: center;
+    margin-top: 82px;
+    width: 100%;
+    height: calc(100vh - 82px);
+    background-image: url(assets/images/pictures/Backdrop.png);
+    background-size:cover;
+    color: white;
+  }
+
+  .head {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    font-size: 1.5vmin;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    opacity: 0.8;
+  }
+
+  .head h2, .head h4 {
+    opacity:1;
+    font-size: 4vmin;
+  }
+/* page two */
+  .pagetwo {
+    font-size: 3.5vmin;
+    width: 100%;
+    position: relative;
+    top:calc(100vh - 82px);
+    height:calc(((100vh - 82px) / 2) * 5);
+  }
+
+  @media screen and (max-height: 700px) {
+    .pagetwo p{font-size:3vmin;}
+    .pagetwo button{font-size:3vmin;}
+  }
+
+  .pagetwo h3 {
+    font-size: 4vmin;
+  }
+
+  .pagetwo p {
+    margin-block-end: 0;
+    margin-bottom:0;
+  }
+
+  .where {
+    max-height: calc((100vh - 82px) / 2);
+    color: black;
+    text-align: center;
+    background-color: white;
+    opacity: 0.8;
+  }
+
+  .map-head {
+    width: 100%;
+    position: absolute;
+    margin-top: 10px;
+    top: 0;
+  }
+
+  .map-body {
+    min-height: 1px;
+    width: 100%;
+    height: calc(((100vh - 82px) / 2) - 4vmin - 18px);
+    position: absolute;
+    bottom: calc(((100vh - 82px) / 2) * 4);
+  }
+
+  .what {
+    position: absolute;
+    color: black;
+    bottom: calc(((100vh - 82px) / 2) * 3);
+    width: 100%;
+    height: calc((100vh - 82px) / 2);
+    text-align: center;
+    background-color: #c9c9c9;
+    opacity: 0.8;
+  }
+
+  .text {
+    position: absolute;
+    color: black;
+    width: 100%;
+    bottom: calc(((100vh - 82px) / 2) * 2);
+    height: calc((100vh - 82px) / 2);
+    text-align: center;
+    background-color: #7e7e7e;
+    opacity: 0.8;
+  }
+
+  .pics {
+    position: absolute;
+    color: black;
+    width: 100%;
+    bottom: calc((100vh - 82px) / 2);
+    height: calc((100vh - 82px) / 2);
+    text-align: center;
+    background-color: #5c5b5b;
+    opacity: 0.8;
+  }
+
+  .attractions {
+    position: absolute;
+    color: black;
+    width: 100%;
+    bottom: 0;
+    height: calc((100vh - 82px) / 2);
+    text-align: center;
+    background-color: #323232;
+    opacity: 0.8;
+  }
+/* Button */
+  .indexbtn {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #c9c9c9;
+    border: none;
+    color: #000;
+    text-align: center;
+    font-size: 3.5vmin;
+    padding: 1%;
+    width: 25%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .indexbtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .indexbtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .indexbtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .indexbtn:hover span {
+    padding-right: 25px;
+  }
+
+  .indexbtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  /* Essay exclusives  */
+  .essay {
+    padding: 10px 160px;
+  }
+/* Landmark exclusives */
+  .land {
+    font-size: 3vmin;
+    padding: 10px 160px;
+  }
+
+  .land h2 {
+    font-size: 2rem;
+  }
+
+  .land h4 {
+    font-size: 3.5vmin;
+  }
+
+  .land p {
+    margin-left: 2vw;
+  }
+
+  .land-container {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .land-text {
+    text-align: left;
+  }
+
+  .land-img {
+    margin-left:10px;
+    width: 50vw;
+  }
+
+  .land-img img{
+    max-width: 30vw;
+    background-color: MidnightBlue;
+  }
+
+  .land-img p {
+    font-size: 2.75vmin;
+  }
+
+  @media screen and (max-width: 1150px) {
+    .land-container {flex-direction: column; justify-content: center;}
+    .land-text {width:100%}
+    .land-img img {width: 100%; max-width: fit-content;}
+    .land-img {margin-left:0; text-align: center; width: 100%; max-height: 100%;}
+    .land-img p{margin-left:0;}
+  }
+  /* Pictures exclusives */
+  .image1 {
+    padding: 10px 10vw;
+  }
+
+  .img-pic {
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .img-pic img {
+    width:35vw;
+  }
+
+  .img-text {
+    position: relative;
+    height: 3vmin;
+    font-size: 3vmin;
+    margin-bottom: 6vmin;
+  }
+  .t1 {
+    position: absolute;
+    width: 35vw;
+    text-align:center;
+    margin-bottom:10px;
+  }
+
+  .t2 {
+    position: absolute;
+    right: 0px;
+    width: 35vw;
+    text-align:center;
+  }
+
+  @media only screen and (min-width: 672px) {
+    .image1 {
+      display:block;
+    }
+    .image2
+    {
+      display:none;
+    }
+  }
+  /* Small screens */
+  .image2 {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .img {
+    display:flex;
+    font-size: 4vmin;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img img {
+    width: 75vw;
+  }
+
+  @media only screen and (max-width: 671px) {
+    .image1
+    {
+      display: none;
+    }
+    .image2
+    {
+      display: static;
+    }
+  }
+
