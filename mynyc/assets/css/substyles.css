@@ -1,6 +1,6 @@
   @font-face {
     font-family: genshin;
-    src: url(../fonts/zh-cn.ttf);
+    src: url(../fonts/zh-cn.woff2);
   }
   html {
     cursor:url("https://i.imgur.com/5HurJos.png"), progress;
