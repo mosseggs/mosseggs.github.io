@@ -255,7 +255,7 @@ function game(){
         bullet = new Bullet(player.x,player.y - player.diameter / 2);
       }
       else{
-        bullet = new Bullet2(player.x,player.y,enemyX,enemyY);
+        bullet = new Bullet2(player.x,player.y,enemy.x,enemy.y);
         bullet.setSpeed();
       }
       playerBullets.push(bullet);
