@@ -1,5 +1,5 @@
 class Bullet2{
-    constructor(x,y){
+    constructor(x,y, enemyx, enemyy){
         this.x = x;
         this.y = y;
         this.dx = 0;
@@ -7,7 +7,7 @@ class Bullet2{
         this.diameter = 10 * 1.5;
         this.pos = createVector(this.x,this.y);
         this.vel = createVector(this.dx,this.dy);
-        this.direction = createVector(mouseX,mouseY);
+        this.direction = createVector(enemyx,enemyy);
         this.speed = 2;
         this.damage = 10;
     }
