@@ -74,6 +74,7 @@ body{
     align-content: space-around;
     justify-content: space-evenly;
     align-items: stretch;
+    text-align:center;
     top: 92px;
     height: calc(100vh - 92px);
     padding: 0 5.5em 0 5.5em;
@@ -87,12 +88,12 @@ body{
     position: relative;
     background: rgb(255, 255, 255);
     width: 50vw;
-    height: 9em;
+    height: 10em;
     border-radius: 3em;
 }
 .index .section .background{
     width: 50vw;
-    height: 9em;
+    height: 10em;
     border-radius: 3em;
 
 }
