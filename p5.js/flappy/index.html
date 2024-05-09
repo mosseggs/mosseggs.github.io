@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    #defaultCanvas0 {
+      position: relative;
+      left: calc(50vw - 400px);
+      top:calc(50vh - 250px);
+      animation-name: rotate;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+    }
+    @keyframes rotate{
+      /* Solid 1 rotation per 1 second */
+      0%   {transform: rotate(0deg);}
+      25%  {
+        transform: rotate(90deg);
+        left:calc(50vw - 200px);
+      }
+      50%  {
+        transform: rotate(180deg);
+        right:calc(50vw - 200px);
+      }
+      75%  {
+        transform: rotate(270deg);
+        
+      }
+      100% {
+        transform: rotate(360deg);
+        right:calc(50vw - 200px);
+      }
+      /* Rotate back and forth 1 rotation per 1/5 second*/
+      /* 0%   {transform: rotate(0deg);}
+      20%  {transform: rotate(360deg);}
+      40%  {transform: rotate(0deg);}
+      60%  {transform: rotate(360deg);}
+      80%  {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);} */
+    }
+  </style>
+  <script src="p5/p5.js"></script>
+  <script src="p5/p5.sound.js"></script>
+  <script src="bird.js"></script>
+  <script src="pipe.js"></script>
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+  <main>
+  </main>
+</body>
+
+</html>
