@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  background(000);
+  background(0);
   // put your code for drawing here
   x = x + (posX * dirX);
   y = y + (posY * dirY);
