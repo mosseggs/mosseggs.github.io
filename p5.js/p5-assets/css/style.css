@@ -15,6 +15,7 @@ body{
 }
 .main {
     margin-top: 92px;
+    width: fit-content;
     background:#f4f4f4;
     font-family: 'Average Sans', sans-serif;
 
@@ -46,26 +47,6 @@ body{
     display: inline-block;
 }
 
-/* For Small Screens */
-@media only screen and (max-width: 800px) {
-    .sidenav a.name {display: none;}
-    .sidenav a.link {display: none;}
-    .dropdown {display: inline-block;}
-    #moss2{display: inline-block;}
-}
-
-@media only screen and (min-width: 801px) {
-    .sidenav a.name {display: inline-block;}
-    .sidenav a.link {display: inline-block;}
-    div.dropdown, button.dropbtn, a.dropdown-content {display: none;}
-    #moss2{display: none;}
-}
-@media only screen and (max-width: 890px) {
-    .resume ul{flex-wrap: wrap;}
-}
-@media only screen and (min-width: 891px) {
-    .resume ul{flex-wrap: nowrap;}
-}
 /* Index */
 .index{
     display: flex;
@@ -138,4 +119,34 @@ body{
 }
 .index .section:hover{
     transform: scale(1.05);
+}
+
+/* For Small Screens */
+@media only screen and (max-width: 1000px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        background:#f4f4f4;
+        text-align:center;
+        justify-items: center;
+    }
+    .index{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-items: stretch;
+        text-align:center;
+    }
+    .group{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        text-align:center;
+    }
 }

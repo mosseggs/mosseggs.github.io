@@ -46,26 +46,6 @@ body{
     display: inline-block;
 }
 
-/* For Small Screens */
-@media only screen and (max-width: 800px) {
-    .sidenav a.name {display: none;}
-    .sidenav a.link {display: none;}
-    .dropdown {display: inline-block;}
-    #moss2{display: inline-block;}
-}
-
-@media only screen and (min-width: 801px) {
-    .sidenav a.name {display: inline-block;}
-    .sidenav a.link {display: inline-block;}
-    div.dropdown, button.dropbtn, a.dropdown-content {display: none;}
-    #moss2{display: none;}
-}
-@media only screen and (max-width: 890px) {
-    .resume ul{flex-wrap: wrap;}
-}
-@media only screen and (min-width: 891px) {
-    .resume ul{flex-wrap: nowrap;}
-}
 /* Index */
 .index{
     text-align:center;

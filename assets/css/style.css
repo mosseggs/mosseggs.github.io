@@ -46,34 +46,15 @@ body{
     display: inline-block;
 }
 
-/* For Small Screens */
-@media only screen and (max-width: 800px) {
-    .sidenav a.name {display: none;}
-    .sidenav a.link {display: none;}
-    .dropdown {display: inline-block;}
-    #moss2{display: inline-block;}
-}
-
-@media only screen and (min-width: 801px) {
-    .sidenav a.name {display: inline-block;}
-    .sidenav a.link {display: inline-block;}
-    div.dropdown, button.dropbtn, a.dropdown-content {display: none;}
-    #moss2{display: none;}
-}
-@media only screen and (max-width: 890px) {
-    .resume ul{flex-wrap: wrap;}
-}
-@media only screen and (min-width: 891px) {
-    .resume ul{flex-wrap: nowrap;}
-}
 /* Index */
 .index{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: space-around;
+    align-content: center;
     justify-content: space-evenly;
-    align-items: stretch;
+    justify-items: center;
+    align-items: center;
     text-align:center;
     top: 92px;
     height: calc(100vh - 92px);
@@ -86,7 +67,7 @@ body{
 }
 .index .section{
     position: relative;
-    background: rgb(255, 255, 255);
+    align-items: center;
     width: 50vw;
     height: 10em;
     border-radius: 3em;
@@ -95,20 +76,43 @@ body{
     width: 50vw;
     height: 10em;
     border-radius: 3em;
-
 }
+
 .index .section .text{
+    display: flex;
     position: absolute;
     font-size: 2em;
     top: 50%;
-    left: 50%;
     width: 50%;
+    left:25vw;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
     text-align: center;
+    align-items: center;
     transform: translate(-50%, -50%);
     color: #000000;
     z-index: 2;
-
 }
+
+@media only screen and (max-width: 890px) {
+    .index{
+        position: absolute;
+        padding-left: 0;
+        left: 12%;
+        top: 0;
+    }
+
+    .index .section .background{
+        left: 20%;
+        width: 75vw;
+    }
+
+    .index .section .text {
+        left: 37.5vw
+    }
+}
+
 .index .s1 .background{
     background-image: url(../images/Backdrop.png);
     background-position-x: center;
@@ -139,3 +143,32 @@ body{
 .index .section:hover{
     transform: scale(1.05);
 }
+
+/* For Small Screens */
+  .sidenav button {
+    padding: 6px 0px 6px 14px;
+    text-decoration: none;
+    align-items: center;
+    font-size: 25px;
+    color: #818181;
+    background-color: #111;
+  }
+
+  .dropbtn:hover, .dropbtn:focus {
+    color: #666;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #262626;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
