@@ -3,22 +3,26 @@
     font-family: "genshin";
     src: url("../fonts/zh-cn.woff2");
 }
+
 @font-face {
     font-family: "flappy";
     src: url("../fonts/font.ttf");
 
 }
-body{
+
+body {
     font-family: cursive;
     font-size: 1em;
-    margin:0;
+    margin: 0;
 }
+
 .main {
     margin-top: 92px;
-    background:#f4f4f4;
+    background: #f4f4f4;
     font-family: 'Average Sans', sans-serif;
 
 }
+
 /* Navigation */
 .sidenav {
     font-family: genshin;
@@ -31,9 +35,9 @@ body{
     overflow-y: hidden;
     overflow-x: hidden;
     padding-top: 10px;
-    cursor:default;
+    cursor: default;
     z-index: 9;
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -47,44 +51,47 @@ body{
 }
 
 /* Index */
-.index{
+.index {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    align-content: center;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
-    text-align:center;
-    top: 92px;
-    height: calc(100vh - 92px);
-    padding: 0 5.5em 0 5.5em;
+    text-align: center;
+    width: 100%;
+    row-gap: 1em;
+    height:fit-content;
+    padding: 0;
 }
-.index a{
-    text-decoration:none;
-    color:black;
-    height:auto
+
+.index a {
+    text-decoration: none;
+    color: black;
+    height: auto
 }
-.index .section{
+
+.index .section {
     position: relative;
     align-items: center;
     width: 50vw;
     height: 10em;
     border-radius: 3em;
 }
-.index .section .background{
+
+.index .section .background {
     width: 50vw;
     height: 10em;
     border-radius: 3em;
 }
 
-.index .section .text{
+.index .section .text {
     display: flex;
     position: absolute;
     font-size: 2em;
     top: 50%;
     width: 50%;
-    left:25vw;
+    left: 25vw;
     flex-direction: column;
     align-content: center;
     justify-content: center;
@@ -96,79 +103,78 @@ body{
 }
 
 @media only screen and (max-width: 890px) {
-    .index{
-        position: absolute;
-        padding-left: 0;
-        left: 12%;
+    .index {
         top: 0;
     }
 
-    .index .section .background{
-        left: 20%;
-        width: 75vw;
-    }
-
-    .index .section .text {
-        left: 37.5vw
+    .index .section .background {
+        width: 50vw;
     }
 }
 
-.index .s1 .background{
+.index .s1 .background {
     background-image: url(../images/Backdrop.png);
     background-position-x: center;
     background-position-y: center;
     background-size: 150%;
-    opacity:50%
+    opacity: 50%
 }
-.index .s2 .background{
+
+.index .s2 .background {
     background-color: #000000;
 }
-.index .s2 .text{
-    color:white;
+
+.index .s2 .text {
+    color: white;
     font-family: flappy;
 }
-.index .s3 .background{
+
+.index .s3 .background {
     background-image: url(../images/rit.jpg);
     background-position-x: center;
     background-position-y: center;
     background-size: 101%;
 }
-.index .s4 .background{
+
+.index .s4 .background {
     background-color: gray;
 }
-.index .s4 .text{
-    color:white;
+
+.index .s4 .text {
+    color: white;
     font-family: flappy;
 }
-.index .section:hover{
+
+.index .section:hover {
     transform: scale(1.05);
 }
 
 /* For Small Screens */
-  .sidenav button {
+.sidenav button {
     padding: 6px 0px 6px 14px;
     text-decoration: none;
     align-items: center;
     font-size: 25px;
     color: #818181;
     background-color: #111;
-  }
+}
 
-  .dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover,
+.dropbtn:focus {
     color: #666;
-  }
+}
 
-  .dropdown {
+.dropdown {
     position: relative;
     display: inline-block;
-  }
+}
 
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: fixed;
     background-color: #262626;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
+}
