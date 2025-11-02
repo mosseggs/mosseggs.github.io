@@ -61,9 +61,10 @@ body {
     text-align: center;
     width: 100%;
     row-gap: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
     height:fit-content;
+    min-height: calc(100vh - 92px);
+
+    padding: 0;
 }
 
 .index a {
@@ -115,6 +116,7 @@ body {
 
 .index .s1 .background {
     background-image: url(../images/Backdrop.png);
+    background-color: rgb(255,255,255);
     background-position-x: center;
     background-position-y: center;
     background-size: 150%;
@@ -138,20 +140,14 @@ body {
 }
 
 .index .s4 .background {
-    background-color: rgb(255, 107, 107);
+    background-color: gray;
 }
 
 .index .s4 .text {
+    color: white;
     font-family: flappy;
 }
 
-.index .s5 .background {
-    background-color: rgb(158, 206, 146);
-}
-
-.index .s6 .background {
-    background-color: rgb(119, 194, 255);
-}
 
 .index .section:hover {
     transform: scale(1.05);
