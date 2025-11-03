@@ -55,7 +55,6 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-around;
     justify-items: center;
     align-items: center;
     text-align: center;
@@ -104,13 +103,23 @@ body {
     z-index: 2;
 }
 
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 812px) {
     .index {
         top: 0;
     }
 
     .index .section .background {
         width: 50vw;
+    }
+
+    .index iframe {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 813px) {
+    .index iframe {
+        width: 75vw;
     }
 }
 
