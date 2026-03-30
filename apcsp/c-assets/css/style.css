@@ -14,13 +14,14 @@ body {
     font-family: cursive;
     font-size: 1em;
     margin: 0;
+
 }
 
 .main {
     margin-top: 92px;
     background: #f4f4f4;
+    height:calc(100vh - 92px);
     font-family: 'Average Sans', sans-serif;
-
 }
 
 /* Navigation */
@@ -61,7 +62,6 @@ body {
     text-align: center;
     width: 100%;
     row-gap: 1em;
-    height:fit-content;
     padding: 0;
 }
 
@@ -112,31 +112,6 @@ body {
     }
 }
 
-.index .s1 .background {
-    background-image: url(../images/Backdrop.png);
-    background-color: rgb(255,255,255);
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 150%;
-    opacity: 50%
-}
-
-.index .s2 .background {
-    background-color: #000000;
-}
-
-.index .s2 .text {
-    color: white;
-    font-family: flappy;
-}
-
-.index .s3 .background {
-    background-image: url(../images/rit.jpg);
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 101%;
-}
-
 .index .s4 .background {
     background-color: gray;
 }
@@ -145,7 +120,6 @@ body {
     color: white;
     font-family: flappy;
 }
-
 
 .index .section:hover {
     transform: scale(1.05);
