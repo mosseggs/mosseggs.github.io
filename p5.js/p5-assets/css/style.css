@@ -12,10 +12,10 @@ body{
     font-family: cursive;
     font-size: 1em;
     margin:0;
+    background:#f4f4f4;
 }
 .main {
     margin-top: 92px;
-    width: fit-content;
     background:#f4f4f4;
     font-family: 'Average Sans', sans-serif;
 
@@ -76,7 +76,6 @@ body{
     width: 50vw;
     height: 10em;
     border-radius: 3em;
-
 }
 .index .section .text{
     position: absolute;
@@ -90,39 +89,12 @@ body{
     z-index: 2;
 
 }
-.index .s1 .background{
-    background-image: url(../images/Backdrop.png);
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 150%;
-    opacity:50%
-}
-.index .s2 .background{
-    background-color: #000000;
-}
-.index .s2 .text{
-    color:white;
-    font-family: flappy;
-}
-.index .s3 .background{
-    background-image: url(../images/rit.jpg);
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 101%;
-}
-.index .s4 .background{
-    background-color: gray;
-}
-.index .s4 .text{
-    color:white;
-    font-family: flappy;
-}
 .index .section:hover{
     transform: scale(1.05);
 }
 
 /* For Small Screens */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1240px) {
     body{
         display: flex;
         justify-content: center;
