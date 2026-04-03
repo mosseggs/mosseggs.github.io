@@ -14,13 +14,14 @@ body {
     font-family: cursive;
     font-size: 1em;
     margin: 0;
+
 }
 
 .main {
     margin-top: 92px;
     background: #f4f4f4;
+    height:fit-content;
     font-family: 'Average Sans', sans-serif;
-
 }
 
 /* Navigation */
@@ -55,15 +56,13 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     justify-items: center;
     align-items: center;
     text-align: center;
     width: 100%;
     row-gap: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    height:fit-content;
+    padding: 0;
 }
 
 .index a {
@@ -113,48 +112,13 @@ body {
     }
 }
 
-.index .s1 .background {
-    background-image: url(../images/Backdrop.png);
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 150%;
-    opacity: 50%
-}
-
-.index .s2 .background {
-    background-color: #000000;
-}
-
-.index .s2 .text {
-    color: white;
-    font-family: flappy;
-}
-
-.index .s3 .background {
-    background-image: url(../images/rit.jpg);
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 101%;
-}
-
 .index .s4 .background {
-    background-color: rgb(224, 210, 118);
+    background-color: gray;
 }
 
 .index .s4 .text {
+    color: white;
     font-family: flappy;
-}
-
-.index .s5 .background {
-    background-color: rgb(158, 206, 146);
-}
-
-.index .s6 .background {
-    background-color: rgb(119, 194, 255);
-}
-
-.index .s7 .background {
-    background-color: rgb(255, 107, 107);
 }
 
 .index .section:hover {
