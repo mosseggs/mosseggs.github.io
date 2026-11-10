@@ -157,6 +157,13 @@ body {
     background-color: rgb(255, 107, 107);
 }
 
+.index .s8 .background {
+    background-image: url(../image/pipes.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 101%;
+}
+
 .index .section:hover {
     transform: scale(1.05);
 }

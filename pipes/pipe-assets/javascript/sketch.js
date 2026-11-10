@@ -50,7 +50,7 @@ function end() {
     textFont('Verdana');
     if(gameState == "end") {
       fill(0);
-      text("Your work isn't finished",(col * scale + ((4 * scale) / 8)) / 2, row / 2);
+      text("Your work is finished",(col * scale + ((4 * scale) / 8)) / 2, row / 2);
       noFill();
     }
 
