@@ -1,0 +1,210 @@
+/* Global */
+@font-face {
+    font-family: "genshin";
+    src: url("../fonts/zh-cn.woff2");
+}
+
+@font-face {
+    font-family: "flappy";
+    src: url("../fonts/font.ttf");
+
+}
+
+body {
+    font-family: cursive;
+    font-size: 1em;
+    margin: 0;
+    height: 100%;
+}
+
+.main {
+    margin-top: 92px;
+    background: #f4f4f4;
+    font-family: 'Average Sans', sans-serif;
+
+}
+
+/* Navigation */
+.sidenav {
+    font-family: genshin;
+    height: 82px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 10px;
+    cursor: default;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    align-items: center;
+    font-size: 25px;
+    color: #818181;
+    display: inline-block;
+}
+
+/* Index */
+.index {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    row-gap: 1em;
+    height:fit-content;
+    min-height: calc(100vh - 92px);
+
+    padding: 0;
+}
+
+.index a {
+    text-decoration: none;
+    color: black;
+    height: auto
+}
+
+.index .section {
+    position: relative;
+    align-items: center;
+    width: 50vw;
+    height: 10em;
+    border-radius: 3em;
+}
+
+.index .section .background {
+    width: 50vw;
+    height: 10em;
+    border-radius: 3em;
+}
+
+.index .section .text {
+    display: flex;
+    position: absolute;
+    font-size: 2em;
+    top: 50%;
+    width: 50%;
+    left: 25vw;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 812px) {
+    .index {
+        top: 0;
+    }
+
+    .index .section .background {
+        width: 50vw;
+    }
+
+    .index iframe {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 813px) {
+    .index iframe {
+        width: 75vw;
+    }
+}
+
+.index .s1 .background {
+    background-image: url(../images/Backdrop.png);
+    background-color: rgb(255,255,255);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 150%;
+    opacity: 50%
+}
+
+.index .s2 .background {
+    background-color: #000000;
+}
+
+.index .s2 .text {
+    color: white;
+    font-family: flappy;
+}
+
+.index .s3 .background {
+    background-image: url(../images/rit.jpg);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 101%;
+}
+
+.index .s4 .background {
+    background-color: gray;
+}
+
+.index .s4 .text {
+    color: white;
+    font-family: flappy;
+}
+
+
+.index .section:hover {
+    transform: scale(1.05);
+}
+
+/* For Small Screens */
+.sidenav button {
+    padding: 6px 0px 6px 14px;
+    text-decoration: none;
+    align-items: center;
+    font-size: 25px;
+    color: #818181;
+    background-color: #111;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    color: #666;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #262626;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+main {
+    margin-top: 6em;
+    height: 100%;
+    display: flex;
+
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+
+    /* This centers our sketch vertically. */
+    align-items: center;
+}
+
+.p5Canvas {
+
+}
